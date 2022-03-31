@@ -19,7 +19,7 @@ test("display product images from server", async () => {
 test("when fetching product data, face an error", async() => {
     server.resetHandlers(
         rest.get(`http://localhost:4000/products`, (req, res, ctx) => {
-            res(ctx.status(500))
+            return res(ctx.status(500))
         })
     )
     render(<Type orderType="products" />)
