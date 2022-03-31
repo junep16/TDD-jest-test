@@ -14,7 +14,7 @@ export default function Type({orderType}) {
             let response = await axios.get(`http://localhost:4000/${orderType}`); 
             setItems(response.data); 
         } catch(error) {
-
+          
         }
     }
     const ItemComponent = orderType === "products" ? Products : null; 
@@ -27,6 +27,6 @@ export default function Type({orderType}) {
     ));
     
   return (
-    <div>(optionItems)</div>
+    <div>{optionItems}</div>
   )
 }

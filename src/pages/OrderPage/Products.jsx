@@ -21,7 +21,6 @@ export default function Products({
             min="0"
             defaultValue={0}
           />
-          
         </form>
     </div>
   )
