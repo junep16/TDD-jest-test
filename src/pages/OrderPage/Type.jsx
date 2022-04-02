@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from "axios"; 
 import Products from "../OrderPage/Products"; 
 import ErrorBanner from '../../components/ErrorBanner';
+import Options from './Options';
 
 export default function Type({orderType}) {
     const [items, setItems] = useState([]); 
@@ -19,7 +20,7 @@ export default function Type({orderType}) {
           setError(true)
         }
     }
-    const ItemComponent = orderType === "products" ? Products : null; 
+    const ItemComponent = orderType === "products" ? Products : Options; 
     const optionItems = items.map((item) => (
       <ItemComponent
         key={item.name}
