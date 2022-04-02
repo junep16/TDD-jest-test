@@ -1,16 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import OrderPage from './pages/OrderPage/OrderPage';
 
 function App() {
   return ( 
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. 
-          Learn React
-        </p> 
-      </header>
+    <div style={{padding: '4rem' }}>
+      <OrderPage />
     </div>
   );
 }

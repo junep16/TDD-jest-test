@@ -29,12 +29,19 @@ export default function Type({orderType}) {
       />
     ));
   
-    if(error) {
-      return <ErrorBanner message="에러가 발생했습니다">
+    // if(error) {
+    //   return <ErrorBanner message="에러가 발생했습니다">
 
-      </ErrorBanner>
-    }
+    //   </ErrorBanner>
+    // }
   return (
-    <div>{optionItems}</div>
+    <div>
+      <h2>주문 종류</h2>
+      <p>하나의 가격</p>
+      <p>총 가격</p>
+      <div 
+        style={{display: 'flex', flexDirection: orderType === "options" && "column",}}>{optionItems}
+      </div>
+    </div>
   )
 }
